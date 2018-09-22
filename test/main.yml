@@ -6,6 +6,6 @@
 #    action: yum name=update state=latest
    
 roles:
-  - ansible-role-openshiftorigin-singlenode
+   - ansible-role-openshiftorigin-singlenode
   
 
