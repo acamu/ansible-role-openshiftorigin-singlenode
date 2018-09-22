@@ -1,0 +1,3 @@
+- src: http://server:8080/MyContext/ansible/roles/nginx.git
+  scm: git
+  version: "master"
