@@ -19,5 +19,10 @@
     name: docker
     state: "{{ docker_service_state }}"
     enabled: "{{ docker_service_enabled }}" 
-  
+ 
+ - name: Install Docker.
+  package:
+    name: "{{ docker_package }}"
+    state: "{{ docker_package_state }}"
+  notify: restart docker
   
