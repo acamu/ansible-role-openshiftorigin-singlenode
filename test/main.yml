@@ -1,1 +1,12 @@
+---
+- hosts: all
+
+pre_tasks:
+  - name: Make sure the system is up to date
+    action: yum name=update state=latest
+    
+    
+roles:
+  - ansible-role-openshiftorigin-singlenode
+  
 
