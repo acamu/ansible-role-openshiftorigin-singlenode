@@ -28,6 +28,9 @@ Once the repository is installed, install Ansible with yum:
 
 We now have all of the software required to administer our servers through Ansible.
 
+Install the latest git package available in CentOS's repositories:
+
+    sudo yum install git
 
 Role Variables
 --------------
