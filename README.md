@@ -61,6 +61,9 @@ To test the playbook locally, first install the required dependencies locally.
 
     $ ansible-galaxy install --role-file=./tasks/requirements.yml --roles-path=roles --force
 
+and call the test file
+    
+    $ ansible-playbook -i hosts <your yaml> --tags "install" -vvv
 
 License
 -------
