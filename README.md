@@ -3,7 +3,7 @@
 References:
 [1] : http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 
-Openshidt origin singlenode
+Openshift origin singlenode
 =========
 
 This task aim to install Openshift Origin on a free CentOs/RHEL system. It will get all dependencies before install the software
@@ -16,7 +16,18 @@ This task aim to install Openshift Origin on a free CentOs/RHEL system. It will 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Extract of the DigitalOcean Website https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-centos-7
+
+To get Ansible for CentOS 7, first ensure that the CentOS 7 EPEL repository is installed:
+
+    sudo yum install epel-release
+
+Once the repository is installed, install Ansible with yum:
+
+    sudo yum install ansible
+
+We now have all of the software required to administer our servers through Ansible.
+
 
 Role Variables
 --------------
