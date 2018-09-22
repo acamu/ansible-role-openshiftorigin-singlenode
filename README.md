@@ -3,10 +3,15 @@
 References:
 [1] : http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html
 
-Role Name
+Openshidt origin singlenode
 =========
 
-A brief description of the role goes here.
+This task aim to install Openshift Origin on a free CentOs/RHEL system. It will get all dependency before install the software
+
+1- Create an service account for dependencies like docker
+2- Deploy docker on the server if not installed
+3- Manage proxy setting if needed (this part is the most sensible ... all best integrator of the place cannot do this ... unfortunatly it is a prerequisit of all company most of the time)
+
 
 Requirements
 ------------
