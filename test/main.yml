@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localserver
 
 #pre_tasks:
 #  - name: Make sure the system is up to date
