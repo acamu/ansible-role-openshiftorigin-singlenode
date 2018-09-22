@@ -6,7 +6,7 @@ References:
 Openshidt origin singlenode
 =========
 
-This task aim to install Openshift Origin on a free CentOs/RHEL system. It will get all dependency before install the software
+This task aim to install Openshift Origin on a free CentOs/RHEL system. It will get all dependencies before install the software
 
 1- Create an service account for dependencies like docker
 2- Deploy docker on the server if not installed
