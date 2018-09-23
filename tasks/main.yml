@@ -27,7 +27,7 @@
 
 - name: ansible create directory for Openshift
   file:
-    path:"{{ openshift_root_path }}"
+    path: "{{ openshift_root_path }}"
     state: directory
 
 - name: Extract openshift.tgz into destination
