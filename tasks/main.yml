@@ -11,4 +11,3 @@
   unarchive:
     src: "/tmp/{{ openshift_temp_name }}"
     dest: "{{ openshift_root_path }}"
-    
