@@ -21,6 +21,14 @@
     name: "{{ docker_package }}"
     state: "{{ docker_package_state }}"
   notify: restart docker
+ 
+- name: Allow access to insecure registry
+  lineinfile:
+    dest: /usr/lib/systemd/system/docker.service
+    regexp: ^ExecStart=
+    line: ExecStart=/usr/bin/docker daemon -H fd:// --insecure-registry {{ docker_registry_host }}
+  become: yes
+  
   
 - name: Ensure Docker is started and enabled at boot. 
   service:
