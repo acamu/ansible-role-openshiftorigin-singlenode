@@ -30,7 +30,7 @@
     path: "{{ openshift_root_path }}"
     state: directory
 
-- name: Extract openshift.tgz into destination
+- name: Extract openshift.tgz into destination {{ openshift_root_path }}
   unarchive:
     src: "/tmp/{{ openshift_temp_name }}"
     dest: "{{ openshift_root_path }}"
