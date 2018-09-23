@@ -1,6 +1,12 @@
 ---
 - hosts: localserver
 
+  environment:
+    http_proxy: http://127.0.0.1:1234
+    # You can also set it over https.
+    https_proxy: http://127.0.0.1:1234
+    no_proxy: 127.0.0.1, localhost
+    
 #pre_tasks:
 #  - name: Make sure the system is up to date
 #    action: yum name=update state=latest
