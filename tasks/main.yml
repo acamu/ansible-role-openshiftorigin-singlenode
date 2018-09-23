@@ -5,7 +5,16 @@
   stat:
     path: "/tmp/{{ openshift_temp_name }}"
   register: stat_result
-    
+
+- debug:
+    msg: "file exists"
+  when: {{ stat_result }}
+  
+- debug:
+    msg: "file not exists exists"
+  when: {{ !stat_result }}
+  
+  
 - name: Download {{ openshift_temp_name }}
   get_url:
     url: "{{ openshift_url }}"
