@@ -7,7 +7,8 @@
     dest: "/tmp/{{ openshift_temp_name }}"
     mode: 0440
 
-- name: Extract oipenshift.tgz into destination
+- name: Extract openshift.tgz into destination
   unarchive:
     src: "/tmp/{{ openshift_temp_name }}"
     dest: "{{ openshift_root_path }}"
+  when: {{ extract_openshift_localy }}
