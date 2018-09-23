@@ -1,12 +1,12 @@
 ---
 #- include_tasks: setup-RedHat.yml
 
- - name: "Check that the {{ openshift_temp_name }} exists"
+ - name: Check that the {{ openshift_temp_name }} exists
    stat:
      path: "/tmp/{{ openshift_temp_name }}"
    register: stat_result
     
-- name: Download openshift-origin-server-v3.10.0 tar.gz
+- name: Download {{ openshift_temp_name }}
   get_url:
     url: "{{ openshift_url }}"
     dest: "/tmp/{{ openshift_temp_name }}"
