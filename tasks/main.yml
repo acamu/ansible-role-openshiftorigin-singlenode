@@ -26,9 +26,9 @@
   when: stat_result.stat.exists == False 
 
 - name: ansible create directory for Openshift
-    file:
-      path:"{{ openshift_root_path }}"
-      state: directory
+  file:
+    path:"{{ openshift_root_path }}"
+    state: directory
 
 - name: Extract openshift.tgz into destination
   unarchive:
