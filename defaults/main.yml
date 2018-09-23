@@ -12,9 +12,10 @@ docker_restart_handler_state: restarted
 # Used only for RedHat/CentOS/Fedora.
 docker_yum_repo_url: https://download.docker.com/linux/{{ (ansible_distribution == "Fedora") | ternary("fedora","centos") }}/docker-{{ docker_edition }}.repo
 
-
-
-#Openshift reposirtory
+# Openshift reposirtory
 openshift_url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
 openshift_temp_name: openshift-origin-server-linux-64bit.tar.gz
 openshift_root_path: /home/openshift/openshift-server
+
+# Extract
+extract_openshift_localy: true
