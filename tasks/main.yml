@@ -1,5 +1,9 @@
 ---
 - include_tasks: setup-RedHat.yml
 
-
+- name: Download openshift-origin-server-v3.10.0 tar.gz
+  get_url:
+    url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
+    dest: /tmp/openshift-origin-server.tar.gz
+    mode: 0440
 
