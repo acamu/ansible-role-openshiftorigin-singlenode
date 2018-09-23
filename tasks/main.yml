@@ -23,7 +23,7 @@
     url: "{{ openshift_url }}"
     dest: "/tmp/{{ openshift_temp_name }}"
     mode: 0440
-  when: stat_result.stat.exists == True 
+  when: stat_result.stat.exists == False 
 
 - name: Extract openshift.tgz into destination
   unarchive:
