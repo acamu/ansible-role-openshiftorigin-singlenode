@@ -1,3 +1,4 @@
-- src: http://server:8080/MyContext/ansible/roles/nginx.git
+- name: acamu.create-user 
+  src: https://github.com/acamu/ansible-role-adminuser.git
   scm: git
   version: "master"
