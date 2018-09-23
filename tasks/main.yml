@@ -10,7 +10,7 @@
     
 - debug:
     msg: "file exists"
-  when: {{ stat_result.stat.exists == True }}
+  when: stat_result.stat.exists == True 
   
   
 - name: Download {{ openshift_temp_name }}
@@ -18,7 +18,7 @@
     url: "{{ openshift_url }}"
     dest: "/tmp/{{ openshift_temp_name }}"
     mode: 0440
-  when: {{ stat_result.stat.exists == True }}
+  when: stat_result.stat.exists == True 
 
 - name: Extract openshift.tgz into destination
   unarchive:
