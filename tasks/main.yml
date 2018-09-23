@@ -5,12 +5,17 @@
   stat:
     path: "/tmp/{{ openshift_temp_name }}"
   register: stat_result
-- fail:
-    msg: "Whoops! file not found"
+  
+#- fail:
+#    msg: "Whoops! file not found"
     
 - debug:
     msg: "file exists"
   when: stat_result.stat.exists == True 
+  
+- debug:
+    msg: "file not exists"
+  when: stat_result.stat.exists == False 
   
   
 - name: Download {{ openshift_temp_name }}
