@@ -3,11 +3,11 @@
 
 - name: Download openshift-origin-server-v3.10.0 tar.gz
   get_url:
-    url: {{ openshift_url }}
-    dest: /tmp/{{ openshift_temp_name }}
+    url: "{{ openshift_url }}"
+    dest: "/tmp/{{ openshift_temp_name }}"
     mode: 0440
 
 - name: Extract oipenshift.tgz into destination
   unarchive:
-    src: /tmp/{{ openshift_temp_name }}
-    dest: {{ openshift_root_path }}
+    src: "/tmp/{{ openshift_temp_name }}"
+    dest: "{{ openshift_root_path }}"
