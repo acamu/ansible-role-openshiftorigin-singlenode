@@ -17,3 +17,4 @@ docker_yum_repo_url: https://download.docker.com/linux/{{ (ansible_distribution 
 #Openshift reposirtory
 openshift_url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
 openshift_temp_name: openshift-origin-server-linux-64bit.tar.gz
+openshift_root_path: /home/openshift/openshift-server
