@@ -21,7 +21,16 @@
     name: "{{ docker_package }}"
     state: "{{ docker_package_state }}"
   notify: restart docker
- 
+
+
+- name: ensure needed directories are present
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /etc/docker
+    - /etc/systemd/system
+
 - name: Allow access to insecure registry
   lineinfile:
     dest: /usr/lib/systemd/system/docker.service
