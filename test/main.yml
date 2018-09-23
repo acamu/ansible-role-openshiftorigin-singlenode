@@ -12,7 +12,7 @@
 #    action: yum name=update state=latest
    
   roles:
-    #- acamu.create-user
+    #- { acamu.create-user, when: openshift_create_technical_account }
     - role: ../..
   
 
