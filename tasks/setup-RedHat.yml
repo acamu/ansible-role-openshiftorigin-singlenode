@@ -31,6 +31,21 @@
     - /etc/docker
     - /etc/systemd/system
 
+- name: create directory for proxy file
+  file:
+    path: /etc/systemd/system/docker.service.d
+    state: directory
+  when: docker_proxy
+
+- name: create http-proxy.conf
+  copy:
+    content: |
+      [Service]
+      Environment="HTTP_PROXY={{ docker_http_proxy }}" "HTTPS_PROXY={{ docker_https_proxy }}" "NO_PROXY={{ docker_no_proxy }}"
+    dest: /etc/systemd/system/docker.service.d/http-proxy.conf
+  notify: restart docker
+when: docker_proxy
+
 - name: Allow access to insecure registry
   lineinfile:
     dest: /usr/lib/systemd/system/docker.service
