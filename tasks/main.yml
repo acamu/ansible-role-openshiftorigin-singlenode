@@ -1,6 +1,9 @@
 ---
 #- include_tasks: setup-RedHat.yml
 
+- debug:
+  msg: {{  openshift_url.split("/")[0] }}
+
 - name: Check that the {{ openshift_temp_name }} exists
   stat:
     path: "/tmp/{{ openshift_temp_name }}"
