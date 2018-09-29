@@ -2,7 +2,7 @@
 #- include_tasks: setup-RedHat.yml
 
 - debug:
-  msg: "{{ openshift_url.split(".")[openshift_url.split(".") | length-1] }}"
+  msg= "{{ openshift_url.split(".")[openshift_url.split(".") | length-1] }}"
 
 - name: Check that the {{ openshift_temp_name }} exists
   stat:
