@@ -89,6 +89,9 @@ Verify after launch that the cluster isgood configured
     echo $HTTPS_PROXY
     echo $NO_PROXY
 
+If you want to know the other variables
+
+    $ oc cluster up -h
 
 License
 -------
