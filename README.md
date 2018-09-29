@@ -64,6 +64,26 @@ To test the playbook locally, first install the required dependencies locally.
 and call the test file
     
     $ ansible-playbook -i hosts <your yaml> --tags "install" -vvv
+    
+    
+Start cluster manually
+----------------
+
+    oc cluster up --env 'HTTP_PROXY=proxy.host' --env 'HTTPS_PROXY=proxy.host' --env '"NO_PROXY=10.128.0.0/14,172.30.0.0/16,192.1 68.0.0/16"'
+
+
+Variable proxy
+HTTP_PROXY
+HTTPS_PROXY
+NO_PROXY
+
+Verify after launch that the cluster isgood configured
+
+    $ docker exec -it origin bash
+    echo $HTTP_PROXY
+    echo $HTTPS_PROXY
+    echo $NO_PROXY
+
 
 License
 -------
