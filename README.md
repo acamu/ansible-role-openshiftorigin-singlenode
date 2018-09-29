@@ -77,6 +77,11 @@ HTTP_PROXY
 HTTPS_PROXY
 NO_PROXY
 
+    --http-proxy='': HTTP proxy to use for master and builds
+    --https-proxy='': HTTPS proxy to use for master and builds
+    --no-proxy=[]: List of hosts or subnets for which a proxy should not be used
+
+
 Verify after launch that the cluster isgood configured
 
     $ docker exec -it origin bash
