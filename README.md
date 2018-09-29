@@ -102,3 +102,5 @@ An optional section for the role authors to include contact information, or a we
 
 Contributors
 ------------
+
+[1] : https://docs.okd.io/latest/install_config/build_defaults_overrides.html#manually-setting-global-build-defaults
