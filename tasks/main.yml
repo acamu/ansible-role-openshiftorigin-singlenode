@@ -35,7 +35,7 @@
 
 - name: Extract openshift.tgz into destination {{ file_downloaded.src }}
   unarchive:
-    src: {{ file_downloaded.src }}
+    src: "{{ file_downloaded.src }}"
     dest: "{{ openshift_root_path }}"
     extra_opts: [--strip-components=1]
 
