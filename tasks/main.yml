@@ -20,7 +20,7 @@
     msg: "file not exists"
   when: stat_result.stat.exists == False 
   
-- name: Download {{ openshift_temp_name }}
+- name: Download {{ openshift_url }} to {{ openshift_temp_name }}
   get_url:
     url: "{{ openshift_url }}"
     dest: "/tmp/{{ openshift_temp_name }}"
