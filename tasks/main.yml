@@ -36,10 +36,10 @@
     dest: "{{ openshift_root_path }}"
     extra_opts: [--strip-components=1]
 
- - name: Check opensifht version
-     command: {{openshift_root_path}}/oc version
-   register: comm_out
- - debug: msg="{{ comm_out.stdout }}"
+- name: Check opensifht version
+    command: {{openshift_root_path}}/oc version
+  register: comm_out
 
-     - debug: msg="{{ comm_out.stderr }}"
+- debug: msg="{{ comm_out.stdout }}"
+- debug: msg="{{ comm_out.stderr }}"
      
