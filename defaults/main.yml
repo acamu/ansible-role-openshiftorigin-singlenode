@@ -21,7 +21,7 @@ openshift_create_technical_account: false
 docker_registry_host: 172.30.0.0/16
 
 # Openshift repository
-#openshift_url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
+# openshift_url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
 openshift_url: https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz
 openshift_temp_name: openshift-origin-server-linux-64bit.tar.gz
 openshift_root_path: /home/acamu/Public/applications/openshift-server
